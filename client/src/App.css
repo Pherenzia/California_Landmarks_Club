@@ -1,0 +1,50 @@
+:root {
+    --background-white: #fffefe;
+    --main-blue-green: #66d1ad;
+    --second-blue: #6689d1;
+    --second-green: #78d166;
+    --text-black: #1f0905;
+    --link-black: #19332a;
+    --accent-orange: #ff4d32;
+  }
+
+  body {
+      background-color: var(--background-white);
+  }
+  h1,h2,h3,h4,h5,h6,p {
+      color: var(--text-black);
+      line-height: 1.61;
+  }
+  h1,h2,h3,h4,h5,h6 {
+      font-family: "Prata", "Merriweather", "PT Serif";
+  }
+  p {
+      font-family: "Crete Round", "Bodini", "PT Serif";
+  }
+  a {
+    color: var(--link-black)
+  }
+  a:hover {
+    color: var(--accent-orange)  
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+      font-size: 36px;
+  }
+  h3 {
+      font-size: 24px;
+  }
+  h4 {
+      font-size: 18px;
+  }
+  h5 {
+      font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+}
+p{
+    font-size: 12px;
+}

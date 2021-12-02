@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 const landmarkSchema = new Schema({
 
   name: {
