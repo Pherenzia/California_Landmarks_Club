@@ -26,6 +26,9 @@ export default function Navbar() {
           <NavLink to="/signup" className="navbar-link">
             Signup
           </NavLink>
+          <NavLink to="/profile" className="navbar-link">
+            Profile
+          </NavLink>
         </>
       )}
     </nav>

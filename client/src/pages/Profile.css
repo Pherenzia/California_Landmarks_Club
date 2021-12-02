@@ -1,0 +1,21 @@
+.customborder { 
+    border: 1px solid black;
+}
+
+.badgetop { 
+    position: absolute;
+    top: 4em; 
+    right: 5em;
+}
+
+.badgebot { 
+    position: absolute; 
+    top: 8em;
+    right: 5em;
+}
+
+.userName { 
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
