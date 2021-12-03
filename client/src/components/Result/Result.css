@@ -1,0 +1,63 @@
+.resultCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px;
+    margin: 8px 8px 16px 8px;
+    background-color: var(--second-blue);
+    border: var(--second-blue) 1px solid;
+    border-radius: 8px;
+    box-shadow: 1px 2px #888888;
+
+}
+
+.leftDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background-color: var(--background-white);
+    border-radius: 8px;
+}
+
+.leftDiv img {
+    border-radius: 8px;
+}
+
+.rightDiv {
+   background-color: var(--background-white);
+   padding: 16px; 
+   border-radius: 8px;
+}
+.landmarkBtn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    line-height: 1.61;
+    font-size: 18px;
+    background-color: var(--main-blue-green);
+    color: var(--background-white)
+}
+@media only screen and (min-width: 576px) {
+    .resultCard {
+        
+        flex-direction: row;
+    }
+    .leftDiv {
+        flex: 0 0 220px;
+    }
+
+    .rightDiv {
+       position: relative;
+       margin-left: 16px;
+       flex-basis: 70%;
+
+    }
+    .landmarkBtn {
+        width: 25%;
+        position: absolute;
+        left: 5%;
+        bottom: 10%
+    }
+  }
