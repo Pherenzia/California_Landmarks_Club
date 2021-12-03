@@ -1,107 +1,64 @@
 import { useAuth } from "../util/auth";
-import { Container, Row, Col, Stack, Carousel } from "react-bootstrap";
-import niagara from "../images/niagaraFalls.jpg"
-// export default function Home() {
-//   const { isLoggedIn, user } = useAuth();
-//   return (
-//     <div>
-//       {/* TODO: display logged in user's username */}
-//       <h1>Welcome {isLoggedIn ? user.username : "Guest"}!</h1>
-//       <hr />
-//       <p>
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque
-//         explicabo ipsum, facilis repellendus omnis amet in accusantium quisquam
-//         nam qui consectetur sunt distinctio nemo molestiae ratione. Iure,
-//         aliquam debitis.
-//       </p>
-//     </div>
-//   );
-// }
+import { Button, Form, FormControl, Image } from "react-bootstrap";
+
+// import Map from "../components/Map"; possible idea for reusing components
+
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   return (
+    <>
     <div>
       {/* TODO: display logged in user's username */}
+      <h1>Welcome to California Landmark Club {isLoggedIn ? user.username : "Guest"}!</h1>
       <hr />
-      <Container>
-        <Row>
-          <h2 style={{ textAlign: "center" }}>
-            placeholder for Landmark.title
-          </h2>
-        </Row>
-        <Row>
-          <Col xs={1}></Col>
-          <Col xs={10}>
-            <h3 style={{ textAlign: "center" }}>
-              placeholder for registration date
-            </h3>
-          </Col>
-          <Col xs={1}>
-            <button>Was Here</button>
-          </Col>
-        </Row>
-      </Container>
-      <hr />
-      <Container style={{margin: "0"}}>
-        <Row>
-          <Col xs={3} style={{position: "relative"}, {left: "30px"}}>
-            <Row>Total vists: landmark.visits </Row>
-            <hr />
-            <Row>Placeholder Img of landmark.image_url
-              <img src={niagara}></img>
-            </Row>
-            <hr />
-            <Row>Place holder of landmark.description
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque
-        explicabo ipsum, facilis repellendus omnis amet in accusantium quisquam
-        nam qui consectetur sunt distinctio nemo molestiae ratione. Iure,
-        aliquam debitis.</Row>
-          </Col>
-          <Col xs={9}>
-          <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={niagara}
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="holder.js/800x400?text=Second slide&bg=282c34"
-      alt="Second slide"
-    />
+      <h3>
+      Have you ever wanted to see if others like to get out and explore as much as you do?  
+      Well California landmarks club can help you with that.  
+      Simply sign up to start today!
+      </h3>
 
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-          </Col>
-        </Row>
-      </Container>
-      <p>
+      <br/>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicSearch">
+        <Form.Label>Search by location, city, or zipcode</Form.Label>
+        <FormControl type="search" placeholder="Search" />
+        {/* <Form.Text className="text-muted">Search by location, city, or zipcode</Form.Text> */}
+        </Form.Group>
         
-      </p>
+
+        <Button variant="primary" type="submit">Submit</Button>
+
+      </Form>
+
     </div>
+
+      {/* <Map/> possible idea reusing components refer to line 7*/}
+<div className="d-flex justify-content-around homeMap">
+{/* <Container> */}
+      <Image style={{ width: '40rem', marginTop: '.5rem' }} src="https://www.howtogeek.com/wp-content/uploads/2021/01/google-maps-satellite.png" rounded />
+{/* </Container> */}
+  
+</div>
+
+
+  
+  
+  
+ 
+  
+
+
+
+
+
+
+
+
+</>
+
+
   );
+
+ 
 }
