@@ -11,7 +11,7 @@ export default function Home() {
 
       <div>
         {/* TODO: display logged in user's username */}
-        <h1>Welcome to California Landmark Club {isLoggedIn ? user.isLoggedIn : "Guest"}!</h1>
+        <h1>Welcome to California Landmark Club {isLoggedIn ? user.username : "Guest"}!</h1>
         <hr />
         <h3>
           Have you ever wanted to see if others like to get out and explore as much as you do?  
