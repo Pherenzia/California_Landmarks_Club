@@ -28,6 +28,9 @@ export default function Navbart() {
           <NavLink to="/signup" className="navbar-link">
             Signup
           </NavLink>
+          <NavLink to="/profile" className="navbar-link">
+            Profile
+          </NavLink>
         </>
       )}
     </Navbar>
