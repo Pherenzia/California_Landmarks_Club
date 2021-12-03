@@ -12,21 +12,27 @@ router.get("/", (req, res) => {
 });
 
 router.get("/landmarks", (req, res) => {
-    res.json();
-});
-
-router.get("/landmark/:id", (req, res) => {
-    res.json();
-});
-
-router.get("/users", (req, res) => {
+  
   res.json();
 });
 
-router.get("/user/:id", (req, res) => {
-    res.json();
+router.get("/landmarks/:id", (req, res) => {
+  res.json();
+});
+
+router.get("/users", async (req, res) => {
+  const users = await User.find()
+  res.json(users);
+});
+
+router.get("/users/:id", async (req, res) => {
+  const user = await User.findOne({ _id: req.params.id }).select("-password");
+  res.json(user);
+});
+
+router.post("/posts", (req, res) => {
+    
   });
 
-router.post("/posts")
 
 module.exports = router;
