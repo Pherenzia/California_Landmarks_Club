@@ -32,7 +32,6 @@ function App() {
             <Route path="/profile">
               <Profile />
             </Route>
-            
             {/* Use PrivateRoute for pages that should only be accessible to a
             user that has logged in.*/}
             <PrivateRoute path="/protected">
