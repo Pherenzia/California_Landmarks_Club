@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbart from "./components/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -13,7 +13,7 @@ function App() {
 
       <Router>
         <AuthProvider>
-          <Navbar />
+          <Navbart />
           <Switch>
             <Route exact path="/">
               <Home />
