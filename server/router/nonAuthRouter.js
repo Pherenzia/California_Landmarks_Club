@@ -7,17 +7,23 @@ const {
   CommentComment,
 } = require("../models");
 
-router.get("/", (req, res) => {
-  res.json();
-});
 
 router.get("/landmarks", (req, res) => {
-  
-  res.json();
+  Landmark.find({}, function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(result);
+    }
+  });
 });
 
 router.get("/landmarks/:id", (req, res) => {
-  res.json();
+  Landmark.findOne({ _id: req.params.id }, (err, items) => {
+    console.log(items)
+    if (err) res.status(500).send(error);
+    res.status(200).json(items);
+  });
 });
 
 router.get("/users", async (req, res) => {
@@ -30,9 +36,14 @@ router.get("/users/:id", async (req, res) => {
   res.json(user);
 });
 
-router.post("/posts", (req, res) => {
-    
+router.get("/posts", (req, res) => {
+  Post.find({}, function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(result);
+    }
   });
-
+});
 
 module.exports = router;
