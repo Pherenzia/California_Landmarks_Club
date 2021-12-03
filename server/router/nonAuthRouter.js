@@ -12,21 +12,25 @@ router.get("/", (req, res) => {
 });
 
 router.get("/landmarks", (req, res) => {
-    res.json();
+  
+  res.json();
 });
 
-router.get("/landmark/:id", (req, res) => {
-    res.json();
+router.get("/landmarks/:id", (req, res) => {
+  res.json();
 });
 
 router.get("/users", (req, res) => {
   res.json();
 });
 
-router.get("/user/:id", (req, res) => {
-    res.json();
+router.get("/users/:id", (req, res) => {
+  res.json();
+});
+
+router.post("/posts", (req, res) => {
+    
   });
 
-router.post("/posts")
 
 module.exports = router;
