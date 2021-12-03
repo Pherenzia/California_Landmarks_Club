@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useAuth } from "../util/auth";
-import { Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 // This signup form is intentionally minimalist to reduce effort required to
 // customize it to your app's needs. See the excellent best practices guide for
@@ -21,7 +21,8 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     display: "flex",
-  }
+  },
+
 };
 
 const initialFormState = {
@@ -56,46 +57,49 @@ export default function Login() {
   }
   return (
     <>
-    <Form Style={{ width:'50rem', marginTop: '5rem'}} className="mx-auto"></Form>
-    <div className="justify-content-around">
-      <h1 style={styles.formCenter}>Login</h1>
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <div style={styles.formControl}>
-          <label htmlFor="email" style={styles.label}>
-            Email
-          </label>
-          <input
-            disabled={loading}
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter email"
-            value={formState.email.value}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div style={styles.formControl}>
-          <label htmlFor="new-password" style={styles.label}>
-            Password
-          </label>
-          <input
-            disabled={loading}
-            id="new-password"
-            type="password"
-            name="password"
-            placeholder="Enter password"
-            value={formState.password.value}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div style={styles.formControl}>
-          <button disabled={loading} type="submit">
-            {loading ? "Loading..." : "Submit"}
-          </button>
-        </div>
-      </form>
-    </div>
+      <div className="justify-content-around">
+        <h1 style={styles.formCenter}>Login</h1>
+        <hr />
+        <br/>
+        <form onSubmit={handleSubmit}>
+          <div style={styles.formCenter}>
+            <label htmlFor="email" style={styles.label}>
+              Email
+            </label>
+            <input
+              disabled={loading}
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              value={formState.email.value}
+              onChange={handleInputChange}
+            />
+          </div>
+          <br/>
+          <div style={styles.formCenter}>
+            <label htmlFor="new-password" style={styles.label}>
+              Password
+            </label>
+            <input
+              disabled={loading}
+              id="new-password"
+              type="password"
+              name="password"
+              placeholder="Enter password"
+              value={formState.password.value}
+              onChange={handleInputChange}
+            />
+          </div>
+          <br/>
+          <div style={styles.formCenter}>
+            <Button varient="primary" disabled={loading} type="submit">
+              {loading ? "Loading..." : "Submit"}
+            </Button>
+          </div>
+        </form>
+      </div>
+
     </>
   );
 }
