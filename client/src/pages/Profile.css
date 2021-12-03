@@ -1,8 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Audiowide');
-@import url('https://fonts.googleapis.com/css?family=Days+One');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-
 main {
 	margin: 0 auto;
 	max-width: 90%;
@@ -16,10 +12,6 @@ main {
   --cultured: #6689d1;
   --dark: #78d166;
   --darker: #111111;
-  --error: rgb(228, 46, 1);
-  --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
-  --spacing-five: calc(2.5rem);
 
 }
 
@@ -30,13 +22,12 @@ main {
 html,
 body {
   min-height: 100%;
-  background-color: var(--light);
+  /* background-color: var(--light); */
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Crete Round', sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -48,7 +39,7 @@ h1 {
 
 h2 {
   font-size: 36px;
-  font-family: 'Crete Round';
+  /* font-family: 'Crete Round'; */
 }
 
 h3 {
@@ -58,11 +49,6 @@ h3 {
 p {
   font-size: 12px;
   margin-top: 0;
-}
-
-img {
-  max-width: 100%;
-
 }
 
 textarea {
@@ -92,7 +78,7 @@ textarea {
   justify-content: flex-end;
 }
 
-.card {
+.mycard {
   border-radius: 5px;
   height: 400px;
   margin: 2rem;
@@ -125,6 +111,7 @@ textarea {
   width: 50rem;
   box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
 }
+
 #about { 
     display: block;
 
@@ -144,7 +131,7 @@ textarea {
     line-height: 1.61;
 }
 
-.landmarkpic {
+ .landmarkpic {
     border-radius: 5%;
     box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
 }

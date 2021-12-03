@@ -13,20 +13,21 @@ className="img-fluid rounded-circle"
 const tripTally = 25;
 const tallyPic =  <img src="https://img.icons8.com/external-wanicon-flat-wanicon/32/000000/external-pin-location-wanicon-flat-wanicon.png"/>
 
-const landmarkPic = <img src="https://img.icons8.com/color/100/000000/national-park.png"/>
+// const landmarkPic = <img src="https://img.icons8.com/color/100/000000/national-park.png"/>
+
 export default function Profile() {
 	return (
 		<Container >
-			<Row className=" card headingborder">
+			<Row className=" mycard headingborder d-flex">
             
                 {/* Profile picture */}
+                <Container>
 				<div>
 				<section className="container-banner">
                     <img id="profilepic" src="https://img.icons8.com/bubbles/170/000000/iron-man.png" alt="profilepic"/>
                     
-            </section>
+                </section>
 				</div>
-                <Container>
                 <div className="badgewrapper">
 
 				<Col className="badge mb-lg-5 mb-m-4 mb-3">
@@ -54,12 +55,12 @@ export default function Profile() {
                 </Row>
             </Container>
 
-            <Container className="card landmarkCard">
+            <Container className="mycard landmarkCard">
                 <Row className="cardborder">
                     {/* <div className="landmarkPic">{landmarkPic}</div> */}
                     <div>
+                     <img className="landmarkpic" src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12115830/shutterstock_1079234993.jpg" width="400" alt="landmark"/>
                     </div>
-                    <img className="landmarkpic" src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12115830/shutterstock_1079234993.jpg" width="400" alt="landmark"/>
                     <div className="description">
                     <h3 className="landmarkTitle">Balboa Park</h3>
                     <p className="landmarkDescription">was fun</p>
@@ -67,10 +68,12 @@ export default function Profile() {
                 </Row>
             </Container>
 
-            <Container className="card landmarkCard">
+            <Container className="mycard landmarkCard">
                 <Row className="cardborder">
                     {/* <div className="landmarkPic">{landmarkPic}</div> */}
+                    <div>
                     <img className="landmarkpic"src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12120656/shutterstock_114467512.jpg" width="400" alt="landmark"/>
+                    </div>
                     <div className="description">
                     <h3 className="landmarkTitle">Hollywood Sign</h3>
                     <p className="landmarkDescription">was also fun</p>
@@ -78,10 +81,12 @@ export default function Profile() {
                 </Row>
             </Container>
 
-            <Container className="card landmarkCard">
+            <Container className="mycard landmarkCard">
                 <Row className="cardborder">
                     {/* <div className="landmarkPic">{landmarkPic}</div> */}
+                    <div>
                     <img className="landmarkpic"src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12162946/shutterstock_239675659.jpg" width="400" alt="landmark"/>
+                    </div>
                     <div className="description">
                     <h3 className="landmarkTitle">Alcatraz Island</h3>
                     <p className="landmarkDescription">Spooky</p>
