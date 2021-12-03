@@ -10,40 +10,86 @@ alt="badge"
 className="img-fluid rounded-circle"
 />;
 
+const tripTally = 25;
+const tallyPic =  <img src="https://img.icons8.com/external-wanicon-flat-wanicon/32/000000/external-pin-location-wanicon-flat-wanicon.png"/>
+
+const landmarkPic = <img src="https://img.icons8.com/color/100/000000/national-park.png"/>
 export default function Profile() {
 	return (
-		<Container className="customborder">
-			<Row>
+		<Container >
+			<Row className=" card headingborder">
             
                 {/* Profile picture */}
 				<div>
-				<Col xs={8} sm={6} md={6} lg={3} className="center mx-auto mb-lg-5 mb-m-4 mb-3">
-					<img
-						src="https://img.icons8.com/bubbles/150/000000/iron-man.png"
-						alt="Me"
-						className="img-fluid roundedCircle"
-					/>
-                  
-				</Col>
+				<section className="container-banner">
+                    <img id="profilepic" src="https://img.icons8.com/bubbles/170/000000/iron-man.png" alt="profilepic"/>
+                    
+            </section>
 				</div>
+                <Container>
+                <div className="badgewrapper">
 
-				<Col className="badgetop text-right mb-lg-5 mb-m-4 mb-3">
+				<Col className="badge mb-lg-5 mb-m-4 mb-3">
 					{badgeIcon} {badgeIcon} {badgeIcon}
 				</Col>
-                <Col className="badgebot text-right mb-lg-5 mb-m-4 mb-3">
-					{badgeIcon} {badgeIcon} {badgeIcon}
+                </div>
+                </Container>
+
+                <div>
+				<Col className="text-center my-auto" id="about">
+					<h3 className="username">
+					Tony
+					</h3>
+					<h3 className="bio">
+                    My name is Tony and welcome to my page!    
+					</h3>
 				</Col>
-                <div className="jumbotron jumbotron-fluid mb-0">
-				<Col xs={12} sm={6} md={6} className="text-center my-auto" id="about">
-					<p className="username">
-					Name: User
-					</p>
-					<p className="bio">
-                    About: Lorem ipsum dolor sit amet, consectetur adipiscing elit.   
-					</p>
-				</Col>
+               
 				</div>
 			</Row>
+            <Container className="tallyCard">
+                <Row>
+                <h3>Landmarks I've visited: {tripTally} {tallyPic}</h3>
+                
+                </Row>
+            </Container>
+
+            <Container className="card landmarkCard">
+                <Row className="cardborder">
+                    {/* <div className="landmarkPic">{landmarkPic}</div> */}
+                    <div>
+                    </div>
+                    <img className="landmarkpic" src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12115830/shutterstock_1079234993.jpg" width="400" alt="landmark"/>
+                    <div className="description">
+                    <h3 className="landmarkTitle">Balboa Park</h3>
+                    <p className="landmarkDescription">was fun</p>
+                    </div>
+                </Row>
+            </Container>
+
+            <Container className="card landmarkCard">
+                <Row className="cardborder">
+                    {/* <div className="landmarkPic">{landmarkPic}</div> */}
+                    <img className="landmarkpic"src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12120656/shutterstock_114467512.jpg" width="400" alt="landmark"/>
+                    <div className="description">
+                    <h3 className="landmarkTitle">Hollywood Sign</h3>
+                    <p className="landmarkDescription">was also fun</p>
+                    </div>
+                </Row>
+            </Container>
+
+            <Container className="card landmarkCard">
+                <Row className="cardborder">
+                    {/* <div className="landmarkPic">{landmarkPic}</div> */}
+                    <img className="landmarkpic"src="https://s3-us-east-2.amazonaws.com/rvshare-wordpress/wp-content/uploads/2021/02/12162946/shutterstock_239675659.jpg" width="400" alt="landmark"/>
+                    <div className="description">
+                    <h3 className="landmarkTitle">Alcatraz Island</h3>
+                    <p className="landmarkDescription">Spooky</p>
+                    </div>
+                </Row>
+            </Container>
 		</Container>
+        
+        
 	);
 }
