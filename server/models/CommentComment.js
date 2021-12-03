@@ -6,7 +6,7 @@ const commentCommentSchema = new Schema({
       type: String,
       required: true
   },
-  comment_id: {
+  comment: {
     type: Schema.Types.ObjectId,
     ref: PostComment 
   }

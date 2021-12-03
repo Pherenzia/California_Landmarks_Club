@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useAuth } from "../util/auth";
+import { Form } from "react-bootstrap";
 
 // This signup form is intentionally minimalist to reduce effort required to
 // customize it to your app's needs. See the excellent best practices guide for
@@ -16,6 +17,11 @@ const styles = {
     flex: "0 1 6em",
     paddingRight: "0.25em",
   },
+  formCenter: {
+    alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+  }
 };
 
 const initialFormState = {
@@ -49,8 +55,10 @@ export default function Login() {
     return <Redirect to="/" />;
   }
   return (
-    <div>
-      <h1>Login</h1>
+    <>
+    <Form Style={{ width:'50rem', marginTop: '5rem'}} className="mx-auto"></Form>
+    <div className="justify-content-around">
+      <h1 style={styles.formCenter}>Login</h1>
       <hr />
       <form onSubmit={handleSubmit}>
         <div style={styles.formControl}>
@@ -88,5 +96,6 @@ export default function Login() {
         </div>
       </form>
     </div>
+    </>
   );
 }

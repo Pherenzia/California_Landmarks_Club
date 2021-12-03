@@ -5,15 +5,15 @@ const { signToken, requireAuth } = require("../util/auth");
 // Use requireAuth middleware for routes that should return an error to the
 // client if a valid token isn't received.
 router.get("/me", requireAuth, async (req, res) => {
-  const user = await User.findOne({ _id: req.user._id });
+  const user = await User.findOne({ _id: req.user._id }).select("-password");
   res.json(user);
 });
 
 router.post("/register", async (req, res) => {
   try {
     // Create a new user
-    const { email, username, password } = req.body;
-    const user = await User.create({ email, username, password });
+    const { email, username, password, first_name, last_name } = req.body;
+    const user = await User.create({ email, username, password, first_name, last_name });
 
     // Create a token and send response to client
     const token = await signToken(user);

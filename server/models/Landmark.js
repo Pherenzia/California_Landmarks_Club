@@ -26,6 +26,10 @@ const landmarkSchema = new Schema({
   county: {
       type: String,
       required: true,
+  },
+  visits : {
+    type: Number,
+    default: 0,
   }
 });
 
