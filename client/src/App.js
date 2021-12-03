@@ -4,9 +4,9 @@ import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import SearchResults from "./pages/SearchResults"
 import ProtectedPageExample from "./pages/ProtectedPageExample";
 import SignUp from "./pages/SignUp";
-import SearchResults from "./pages/SearchResults"
 import "./App.css";
 import { AuthProvider } from "./util/auth";
 
@@ -20,7 +20,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/results">
+            <Route exact path="/searchresults">
               <SearchResults />
             </Route>
             <Route path="/login">

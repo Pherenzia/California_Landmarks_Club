@@ -18,7 +18,7 @@ const tallyPic =  <img src="https://img.icons8.com/external-wanicon-flat-wanicon
 export default function Profile() {
 	return (
 		<Container >
-			<Row className=" mycard headingborder d-flex">
+			<Row className=" mycard headingborder">
             
                 {/* Profile picture */}
                 <Container>
@@ -34,19 +34,17 @@ export default function Profile() {
 					{badgeIcon} {badgeIcon} {badgeIcon}
 				</Col>
                 </div>
-                </Container>
-
-                <div>
-				<Col className="text-center my-auto" id="about">
 					<h3 className="username">
 					Tony
 					</h3>
 					<h3 className="bio">
                     My name is Tony and welcome to my page!    
 					</h3>
-				</Col>
                
-				</div>
+                </Container>
+
+
+				
 			</Row>
             <Container className="tallyCard">
                 <Row>
