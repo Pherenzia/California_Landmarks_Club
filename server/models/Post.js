@@ -16,11 +16,11 @@ const postSchema = new Schema({
     type: String,
     validate: [({ length }) => length >= 4, 'Comment should be longer.'],
   },
-  landmark_id: {
+  landmark: {
       type: Schema.Types.ObjectId,
       ref: User
   },
-  user_id: {
+  user: {
     type: Schema.Types.ObjectId,
     ref: Landmark
 }
