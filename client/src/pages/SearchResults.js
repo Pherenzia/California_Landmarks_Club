@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Result from '../components/Result/Result' 
+import "./SearchResults.css";
 
 function SearchResults() {
     

@@ -1,11 +1,10 @@
 .navbar {
   display: flex;
+  justify-content: flex-start;
 }
 
 .navbar-link {
   --border: 1px solid #444;
-
-
 
   display: block;
   width: 4em;

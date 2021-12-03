@@ -1,4 +1,6 @@
 const { Schema, model } = require("mongoose");
+const Landmark = require("./Landmark");
+const User = require("./User");
 
 const postSchema = new Schema({
 
@@ -16,11 +18,11 @@ const postSchema = new Schema({
     type: String,
     validate: [({ length }) => length >= 4, 'Comment should be longer.'],
   },
-  landmark_id: {
+  landmark: {
       type: Schema.Types.ObjectId,
       ref: User
   },
-  user_id: {
+  user: {
     type: Schema.Types.ObjectId,
     ref: Landmark
 }

@@ -22,12 +22,6 @@ function App() {
             <Route exact path="/results">
               <SearchResults />
             </Route>
-            {/* <Route path="/profile/:id">
-              <Profile />
-            </Route>
-            <Route path="/landmark/:id">
-              <Landmark />
-            </Route> */}
             <Route path="/login">
               <Login />
             </Route>

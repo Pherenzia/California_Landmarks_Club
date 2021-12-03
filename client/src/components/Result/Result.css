@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 16px;
-    margin: 8px;
+    margin: 8px 8px 16px 8px;
     background-color: var(--second-blue);
     border: var(--second-blue) 1px solid;
     border-radius: 8px;
@@ -41,6 +41,7 @@
 }
 @media only screen and (min-width: 576px) {
     .resultCard {
+        
         flex-direction: row;
     }
     .leftDiv {
@@ -48,10 +49,15 @@
     }
 
     .rightDiv {
+       position: relative;
+       margin-left: 16px;
        flex-basis: 70%;
 
     }
     .landmarkBtn {
         width: 25%;
+        position: absolute;
+        left: 5%;
+        bottom: 10%
     }
   }
