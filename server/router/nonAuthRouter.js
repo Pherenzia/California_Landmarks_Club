@@ -39,14 +39,12 @@ router.get("/users/:id", async (req, res) => {
   res.json(user);
 });
 
-router.get("/posts", (req, res) => {
-  Post.find({}, function (err, result) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.json(result);
-    }
-  });
-});
+
+router.get("/posts", async (req, res) => {
+  const posts = await Post.find()
+  res.json(posts);
+})
+
+
 
 module.exports = router;
