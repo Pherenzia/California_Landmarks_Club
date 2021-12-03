@@ -36,6 +36,14 @@ router.get("/users/:id", async (req, res) => {
   res.json(user);
 });
 
-router.post("/posts", (req, res) => {});
+router.get("/posts", (req, res) => {
+  Post.find({}, function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
 
 module.exports = router;
