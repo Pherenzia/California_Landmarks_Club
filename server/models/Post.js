@@ -20,11 +20,11 @@ const postSchema = new Schema({
   },
   landmark: {
       type: Schema.Types.ObjectId,
-      ref: User
+      ref: Landmark
   },
   user: {
     type: Schema.Types.ObjectId,
-    ref: Landmark
+    ref: User
 }
 });
 

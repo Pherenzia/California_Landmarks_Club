@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import { useAuth } from "../util/auth";
 import "./Navbar.css";
 
@@ -36,7 +36,5 @@ export default function Navbart() {
     </Navbar>
   );
 }
-
-
 
 
