@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
 import { useAuth } from "../util/auth";
 import "./Navbar.css";
 
-export default function Navbar() {
+//renamed navbar to navbart for naming convention, also changed app.js
+export default function Navbart() {
   const { isLoggedIn, logout } = useAuth();
   return (
-    <nav className="navbar">
+    <Navbar className="navbar">
       <NavLink exact to="/" className="navbar-link">
         Home
       </NavLink>
@@ -26,8 +28,13 @@ export default function Navbar() {
           <NavLink to="/signup" className="navbar-link">
             Signup
           </NavLink>
+          <NavLink to="/profile" className="navbar-link">
+            Profile
+          </NavLink>
         </>
       )}
-    </nav>
+    </Navbar>
   );
 }
+
+
