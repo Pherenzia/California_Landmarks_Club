@@ -7,7 +7,6 @@ const {
   CommentComment,
 } = require("../models");
 
-
 router.get("/landmarks", (req, res) => {
   Landmark.find({}, function (err, result) {
     if (err) {
@@ -18,16 +17,20 @@ router.get("/landmarks", (req, res) => {
   });
 });
 
-router.get("/landmarks/:id", (req, res) => {
-  Landmark.findOne({ _id: req.params.id }, (err, items) => {
-    console.log(items)
-    if (err) res.status(500).send(error);
-    res.status(200).json(items);
-  });
+router.get("/landmarks/:id", async (req, res) => {
+  try {
+    const landmark = await Landmark.findOne({ _id: req.params.id }).populate(
+      "posts"
+    );
+    res.status(200).json(landmark);
+  } catch (error) {
+    res.status(500).send(error);
+    console.log(error)
+  }
 });
 
 router.get("/users", async (req, res) => {
-  const users = await User.find()
+  const users = await User.find();
   res.json(users);
 });
 
