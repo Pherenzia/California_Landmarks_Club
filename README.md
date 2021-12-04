@@ -1,3 +1,79 @@
+# CALIFRONIA LANDMARKS CLUB
+
+## Description
+`This is a Historical Landmark Application, where a user can search for any historical landmarks in California.  The user will beable to view the searched location, at the same time view a image, map, adress and summary on the search results page. You will be able to post comments, edit your comments and more.`
+
+![](https://coastalpremierproperties.files.wordpress.com/2015/03/downtown-2.jpg)
+
+
+
+---
+
+## Table of Contents
+
+[Description](#description)
+
+[Study-Material](#Study-Material)
+
+[Features](#features)
+
+[Links](#links)
+
+## Study-Matial
+
+[Mongodb](https://www.mongodb.com/)
+
+[Mongodb Methods](https://docs.mongodb.com/mongodb-shell/reference/methods/)
+
+[Mongoose](https://mongoosejs.com/docs/5.x/docs/models.html)
+
+[Express](https://expressjs.com/en/starter/hello-world.html)
+
+[React Bootstrap](https://react-bootstrap.github.io/)
+
+[API](https://developer.here.com/)
+
+---
+
+## Features
+
+This app was built using HTML 3, CSS 6, Javascript, Bootstrap-React, Mongoose, Express and the Developer Here API
+
+--- 
+
+## Links
+
+[Repository]( https://github.com/Pherenzia/California_Landmarks_Club)
+
+[Live Website]()
+
+---
+---
+
+## Collaborators
+
+![lco mascot](https://learncodeonline.in/mascot.png)
+
+`Students at UCSD coding bootcamp in San Diego, CA`
+
+
+| Name           | Email                   | Github                         | Linkedin                                              |
+| -------------- | ----------------------- | ------------------------------ | ----------------------------------------------------- |
+| Jesse Moniz    | Jmoniz155@gmail.com     | https://github.com/jmoniz155   | https://www.linkedin.com/in/jesse-moniz-98693621a/    |
+| Kalani Mojica  | Mojica.Kalani@gmail.com | https://github.com/mojikalani  | https:// www.linkedin.com                             |
+| Michael Orr    | mike@glquote.com        | https://github.com/michael-orr | https:// www.linkedin.com                             |
+| Mitchell Riley | rileymitchellk@gmail.com| https://github.com/Pherenzia   | https:// www.linkedin.com                             | 
+
+
+
+
+
+
+
+
+
+
+
 # MERN-START
 
 Boilerplate app for full-stack MERN app with Create React App client tool chain. Includes React, JWT authentication, Mongoose/MongoDB and ExpressJS.
