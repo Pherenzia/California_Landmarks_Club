@@ -52,13 +52,13 @@ export default function Navbart() {
         navbarScroll
       >
 
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/profile">Profile</Nav.Link>
-        <Nav.Link href="/searchresults">Search Results</Nav.Link>
-        <Nav.Link href="/landmarkPage">Landmark Page</Nav.Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/searchresults">Search Results</NavLink>
+        <NavLink to="/landmarkPage">Landmark Page</NavLink>
         <NavDropdown title="Login/Signup" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-          <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
+          <NavDropdown.Item to="/login">Login</NavDropdown.Item>
+          <NavDropdown.Item to="/signup">Signup</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="#" disabled>
           Link

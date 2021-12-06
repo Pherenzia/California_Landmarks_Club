@@ -1,9 +1,16 @@
 import { useAuth } from "../util/auth";
-import { Container, Row, Col, Stack, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Stack, Carousel, Form, Button, Accordion } from "react-bootstrap";
 import niagara from "../images/niagaraFalls.jpg"
 import "./landmarkPage.css"
 
-
+// Fetch request for submitting form to profile. 
+// const landmarkResponse = await fetch('/api/landmark', {
+//   method: 'POST',
+//   body: JSON.stringify({ location, startDate, endDate, rating, food, experience, lesson, revisit }),
+//   headers: {
+//     'Content-Type': 'application/json; charset=UTF-8',
+//   },
+// });
 
 export default function Landmark() {
   const { isLoggedIn, user } = useAuth();
@@ -25,7 +32,7 @@ export default function Landmark() {
             </h3>
           </Col>
           <Col xs={1}>
-            <button>Was Here</button>
+            {/* <button>Was Here</button> */}
           </Col>
         </Row>
       </Container>
@@ -83,6 +90,72 @@ export default function Landmark() {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+
+{/* Form Section */}
+<Container>
+<Accordion className=" accordionform"defaultActiveKey="0">
+  <Accordion.Item eventKey="0">
+    <Accordion.Header className="accordionheader">Post your trip!</Accordion.Header>
+    <Accordion.Body>
+<Form class="newTripSubmit">
+  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      <Form.Check type="checkbox" label="I Was Here" />
+    </Form.Group>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Comment about your trip</Form.Label>
+    <Form.Control as="textarea" rows={3} />
+  </Form.Group>
+  {['checkbox'].map((type) => (
+    <div key={`inline-${type}`} className="mb-3">
+      <Form.Label>Rate your trip</Form.Label>
+      <br/>
+      <Form.Check
+        inline
+        label="1"
+        name="group1"
+        type={type}
+        id={`inline-${type}-1`}
+      />
+      <Form.Check
+        inline
+        label="2"
+        name="group2"
+        type={type}
+        id={`inline-${type}-1`}
+      />
+      <Form.Check
+        inline
+        label="3"
+        name="group3"
+        type={type}
+        id={`inline-${type}-1`}
+      />
+      <Form.Check
+        inline
+        label="4"
+        name="group4"
+        type={type}
+        id={`inline-${type}-1`}
+      />
+      <Form.Check
+        inline
+        label="5"
+        name="group5"
+        type={type}
+        id={`inline-${type}-1`}
+      />
+    </div>
+  ))}
+   <Form.Group controlId="formFile" className="mb-3">
+    <Form.Label>Upload Picture?(Maybe)</Form.Label>
+    <Form.Control type="file" />
+  </Form.Group>
+    <Button variant="outline-info">Submit</Button>{' '}
+  </Form>
+  </Accordion.Body>
+  </Accordion.Item>
+  </Accordion>
+</Container>
           </Col>
         </Row>
       </Container>
