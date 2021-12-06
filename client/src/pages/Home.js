@@ -1,5 +1,5 @@
 import { useAuth } from "../util/auth";
-import { Button, Container, Form, FormControl, Image } from "react-bootstrap";
+import { Button, Container, Form, FormControl, Image, Card } from "react-bootstrap";
 import "./Home.css"
 // import Map from "../components/Map"; possible idea for reusing components
 
@@ -7,7 +7,8 @@ import "./Home.css"
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   return (
-    <Container>
+      <Card style={{ height:'60rem', width: '70rem', marginTop: '1rem' }} className="homepic center mx-auto">
+    <Container className="homeBackground">
   
         {/* TODO: display logged in user's username */}
         <h1>Welcome to California Landmark Club {isLoggedIn ? user.username : "Guest"}!</h1>
@@ -39,6 +40,7 @@ export default function Home() {
   
       </div>
     </Container>
+    </Card>
   );
 }
 
