@@ -22,6 +22,7 @@ export default function Profile() {
             
                 {/* Profile picture */}
                 <Container>
+                    
 				<div>
 				<section className="container-banner">
                     <img id="profilepic" src="https://img.icons8.com/bubbles/170/000000/iron-man.png" alt="profilepic"/>

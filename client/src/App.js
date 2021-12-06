@@ -8,7 +8,7 @@ import SearchResults from "./pages/SearchResults"
 import ProtectedPageExample from "./pages/ProtectedPageExample";
 import SignUp from "./pages/SignUp";
 import "./App.css";
-import LandmarkPage from "./pages/LandmarkPage"
+import LandmarkPage from "./pages/landmarkPage"
 import { AuthProvider } from "./util/auth";
 function App() {
   return (
