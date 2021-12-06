@@ -7,21 +7,30 @@ const {
   CommentComment,
 } = require("../models");
 
-router.get("/", (req, res) => {
-  res.json();
-});
-
 router.get("/landmarks", (req, res) => {
-  
-  res.json();
+  Landmark.find({}, function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(result);
+    }
+  });
 });
 
-router.get("/landmarks/:id", (req, res) => {
-  res.json();
+router.get("/landmarks/:id", async (req, res) => {
+  try {
+    const landmark = await Landmark.findOne({ _id: req.params.id }).populate(
+      "posts"
+    );
+    res.status(200).json(landmark);
+  } catch (error) {
+    res.status(500).send(error);
+    console.log(error)
+  }
 });
 
 router.get("/users", async (req, res) => {
-  const users = await User.find()
+  const users = await User.find();
   res.json(users);
 });
 
@@ -30,9 +39,14 @@ router.get("/users/:id", async (req, res) => {
   res.json(user);
 });
 
-router.post("/posts", (req, res) => {
-    
+router.get("/posts", (req, res) => {
+  Post.find({}, function (err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(result);
+    }
   });
-
+});
 
 module.exports = router;
