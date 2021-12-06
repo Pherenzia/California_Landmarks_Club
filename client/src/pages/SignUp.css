@@ -1,0 +1,30 @@
+.center { 
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic { 
+    background-repeat: no-repeat;
+    background-image: url("https://images.pexels.com/photos/3484061/pexels-photo-3484061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
+
+}
+
+.formBackground { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px;
+    margin: 8px 8px 16px 8px;
+    background-color: rgba(252, 239, 239, 0.61);
+    border: rgba(252, 239, 239, 0.61) 1px solid;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
+    
+}
+
+@media only screen and (min-width: 576px) {
+    
+}

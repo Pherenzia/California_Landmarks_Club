@@ -41,7 +41,6 @@
 }
 @media only screen and (min-width: 576px) {
     .resultCard {
-        
         flex-direction: row;
     }
     .leftDiv {
@@ -57,7 +56,10 @@
     .landmarkBtn {
         width: 25%;
         position: absolute;
-        left: 5%;
+        right: 5%;
         bottom: 10%
     }
+  }
+  .leftDiv img { 
+      align-items: center;
   }
