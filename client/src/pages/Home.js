@@ -1,15 +1,15 @@
 import { useAuth } from "../util/auth";
-import { Button, Form, FormControl, Image } from "react-bootstrap";
-
+import { Button, Container, Form, FormControl, Image, Card } from "react-bootstrap";
+import "./Home.css"
 // import Map from "../components/Map"; possible idea for reusing components
 
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   return (
-    <>
-
-      <div>
+    <Container className="homeBackground">
+      <Card style={{ height:'60rem', width: '70rem', marginTop: '1rem' }} className="homepic center mx-auto">
+  
         {/* TODO: display logged in user's username */}
         <h1>Welcome to California Landmark Club {isLoggedIn ? user.username : "Guest"}!</h1>
         <hr />
@@ -32,8 +32,6 @@ export default function Home() {
 
       </Form>
 
-      </div>
-
         {/* <Map/> possible idea reusing components refer to line 7*/}
         <div className="d-flex justify-content-around homeMap">
         {/* <Container> */}
@@ -41,7 +39,8 @@ export default function Home() {
         {/* </Container> */}
   
       </div>
-    </>
+    </Card>
+    </Container>
   );
 }
 

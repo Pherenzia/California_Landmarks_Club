@@ -79,11 +79,14 @@ textarea {
 }
 
 .mycard {
-  border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px;
+    margin: 8px 8px 16px 8px;
+    width: 85%;
+  border-radius: 8px;
   height: 400px;
-  margin: 2rem;
-  position: relative;
-  width: 50rem;
   box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
 }
 
@@ -100,15 +103,17 @@ textarea {
     text-align: center;
 } 
 
-.tallyCard { 
+.tallyCard {  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px;
+    margin: 8px 8px 16px 8px;
   background-color: var(--secondary);
   border: var(--cultured) solid 2px;
   text-align: center;
   border-radius: 5px;
-  height: 60px;
-  margin: 2rem;
-  position: relative;
-  width: 50rem;
+  width: 85%;
   box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
 }
 
@@ -127,12 +132,12 @@ textarea {
 }
 
 .bio { 
-    text-align: center;
+    justify-content: center;
     line-height: 1.61;
 }
 
  .landmarkpic {
-    border-radius: 5%;
+    border-radius: 8px;
     box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
 }
 .description { 

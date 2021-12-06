@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useAuth } from "../util/auth";
 import { Card, Button } from "react-bootstrap";
-
+import "./SignUp.css"
 // This signup form is intentionally minimalist to reduce effort required to
 // customize it to your app's needs. See the excellent best practices guide for
 // sign informs on web.dev https://web.dev/sign-in-form-best-practices/
@@ -58,10 +58,16 @@ export default function SignUp() {
     return <Redirect to="/Profile.js" />;
   }
   return (
+      <Card style={{ height:'60rem', width: '80rem', marginTop: '1rem' }} className="pic center mx-auto">
+        <h1 className="adventureText">
+          Adventure Awaits
+        </h1>
     <>
-      <Card style={{ width: '25rem', marginTop: '5rem' }} className="mx-auto">
-        <Card.Body>
-          <div className="justify-content-around">
+        {/* <Card.Body> */}
+            <div className="card formBackground"> 
+       
+          <div className="justify-content-center">
+            </div>
             <h1 style={styles.formCenter}>Sign Up</h1>
             <hr />
             <div style={styles.formControl}>
@@ -92,7 +98,7 @@ export default function SignUp() {
                 name="lastname"
                 value={formState.lastname.value}
                 onChange={handleInputChange}
-              />
+                />
             </div>
             <div style={styles.formControl}>
               <label htmlFor="username" style={styles.label}>
@@ -107,7 +113,7 @@ export default function SignUp() {
                 name="username"
                 value={formState.username.value}
                 onChange={handleInputChange}
-              />
+                />
             </div>
             <form onSubmit={handleSubmit}>
               <div style={styles.formControl}>
@@ -147,10 +153,8 @@ export default function SignUp() {
 
             </form>
           </div>
-        </Card.Body>
-      </Card>
-
-
+        {/* </Card.Body> */}
     </>
+      </Card>
   );
 }
