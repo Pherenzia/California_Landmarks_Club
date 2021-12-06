@@ -114,37 +114,35 @@ const userSeed = [
     last_name: 'Farian',
     email: 'blameitontherain@gmail.com',
     password: 'password123',
-   }
+  }
 ]
 
+db.User.deleteMany({})
+.then(() => db.User.collection.insertMany(userSeed))
+.then((data) => {
+  console.log(`${data.result.n} records inserted!`);
+  process.exit(0);
+})
+.catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
+
 db.Landmark.deleteMany({})
-  .then(() => db.Landmark.collection.insertMany(landmarkSeed))
-  .then((data) => {
+.then(() => db.Landmark.collection.insertMany(landmarkSeed))
+.then((data) => {
     console.log(`${data.result.n} landmarks inserted!`);   
     return db.Post.deleteMany({})
   })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+  
+  db.Post.deleteMany({})
   .then(() => db.Post.collection.insertMany(postSeed))
   .then((data) => {
     console.log(`${data.result.n} posts inserted!`);
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
-
-db.Post.deleteMany({})
-  
-  
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
-
-  db.User.deleteMany({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then((data) => {
-    console.log(`${data.result.n} records inserted!`);
     process.exit(0);
   })
   .catch((err) => {
