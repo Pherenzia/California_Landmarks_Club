@@ -92,6 +92,20 @@ const postSeed = [
     landmark: mongoose.Types.ObjectId("61aa8e255aa7698f7c59c8c2"),
     user: "61aa91f07247b899c4e7abb",
   },
+  {
+    wasThere: true,
+    image_url: "https://imageurl.com",
+    initial_comment: "this place rules super hard!",
+    landmark: mongoose.Types.ObjectId("61aa8e255aa7698f7c59c8c2"),
+    user: "61aa6ab2e705d71bf0d613fc",
+  },
+  {
+    wasThere: true,
+    image_url: "https://imageurl.com",
+    initial_comment: "this place rocks super hard!",
+    landmark: mongoose.Types.ObjectId("61aa8e255aa7698f7c59c8c2"),
+    user: "61aa6ab2e705d71bf0d613fc",
+  },
 ];
 
 db.Landmark.deleteMany({})

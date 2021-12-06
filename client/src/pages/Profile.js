@@ -11,7 +11,7 @@ className="img-fluid rounded-circle"
 />;
 
 const tripTally = 25;
-const tallyPic =  <img src="https://img.icons8.com/external-wanicon-flat-wanicon/32/000000/external-pin-location-wanicon-flat-wanicon.png"/>
+const tallyPic =  <img alt="placeholder" src="https://img.icons8.com/external-wanicon-flat-wanicon/32/000000/external-pin-location-wanicon-flat-wanicon.png"/>
 
 // const landmarkPic = <img src="https://img.icons8.com/color/100/000000/national-park.png"/>
 
