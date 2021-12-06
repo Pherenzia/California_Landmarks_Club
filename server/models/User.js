@@ -32,7 +32,19 @@ const userSchema = new Schema({
   lastLogin: {
     type: Date,
     default: Date.now,
-  },
+  }
+},
+{
+  toJSON: { virtuals: true }, // So `res.json()` and other `JSON.stringify()` functions include virtuals
+  toObject: { virtuals: true } // So `toObject()` output includes virtuals
+});
+userSchema.virtual('posts', {
+  ref: 'Post', // The model to use
+  localField: '_id', // Find people where `localField`
+  foreignField: 'user', // is equal to `foreignField`
+  // If `justOne` is true, 'members' will be a single doc as opposed to
+  // an array. `justOne` is false by default.
+  justOne: false,
 });
 
 userSchema.pre("save", async function (next) {
