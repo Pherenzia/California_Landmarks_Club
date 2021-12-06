@@ -37,7 +37,7 @@ export default function Login() {
   useEffect(() => {
     if (error) {
       // TODO: replace window alert with custom alert
-      alert(error);
+     error("Please Login");
     }
   }, [error]);
 
@@ -53,7 +53,7 @@ export default function Login() {
 
   if (isLoggedIn) {
     // redirect to home if user is logged in
-    return <Redirect to="/" />;
+    return <Redirect to="/Profile.js" />;
   }
   return (
     <>

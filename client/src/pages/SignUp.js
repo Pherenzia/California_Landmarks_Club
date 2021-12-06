@@ -39,7 +39,7 @@ export default function SignUp() {
   useEffect(() => {
     if (error) {
       // TODO: replace window alert with custom alert.
-      alert(error);
+      alert("Please Sign Up");
     }
   }, [error]);
 
@@ -55,7 +55,7 @@ export default function SignUp() {
 
   if (isLoggedIn) {
     // redirect to home if user is logged in
-    return <Redirect to="/" />;
+    return <Redirect to="/Profile.js" />;
   }
   return (
     <>
