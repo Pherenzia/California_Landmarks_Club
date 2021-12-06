@@ -1,7 +1,7 @@
 import { useAuth } from "../util/auth";
 import { Container, Row, Col, Stack, Carousel } from "react-bootstrap";
 import niagara from "../images/niagaraFalls.jpg"
-
+import "./landmarkPage.css"
 
 
 
@@ -36,7 +36,7 @@ export default function Landmark() {
             <Row>Total vists: landmark.visits </Row>
             <hr />
             <Row>Placeholder Img of landmark.image_url
-              <img src={niagara}></img>
+              <img src={niagara}/>
             </Row>
             <hr />
             <Row>Place holder of landmark.description
@@ -61,7 +61,7 @@ export default function Landmark() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Second slide&bg=282c34"
+      src={niagara}
       alt="Second slide"
     />
 
@@ -73,7 +73,7 @@ export default function Landmark() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
+      src={niagara}
       alt="Third slide"
     />
 

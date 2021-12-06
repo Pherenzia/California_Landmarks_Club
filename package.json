@@ -13,7 +13,8 @@
     "react": "cd client && npm start",
     "server": "cd server && npm run watch",
     "install": "cd server && npm i && cd ../client && npm i",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "seed": "cd server && npm run seed"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,5 @@
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
-  },
-  "dependencies": {}
+  }
 }
