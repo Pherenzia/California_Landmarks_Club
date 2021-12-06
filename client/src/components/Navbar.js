@@ -43,7 +43,7 @@ export default function Navbart() {
      
   <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand >Prestiege Worldwide</Navbar.Brand>
+    <Navbar.Brand >Prestige Worldwide</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
