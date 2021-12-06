@@ -1,0 +1,6 @@
+.background { 
+    background-image: linear-gradient(
+        var(--main-blue-green),
+          var(--second-blue) 
+          )
+}

@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container, Row, Col} from "react-bootstrap";
-import './Profile.css'
+import './Profile.css';
+import Result from '../components/Result/Result'; 
 // import profilePic from '';
 
 const badgeIcon = 
@@ -12,11 +13,28 @@ className="img-fluid rounded-circle"
 
 const tripTally = 25;
 const tallyPic =  <img src="https://img.icons8.com/external-wanicon-flat-wanicon/32/000000/external-pin-location-wanicon-flat-wanicon.png"/>
-
 // const landmarkPic = <img src="https://img.icons8.com/color/100/000000/national-park.png"/>
 
 export default function Profile() {
-	return (
+    const [results] = useState([
+        {
+          name: 'really-old-place',
+          description: 'a description of this really old place',
+          link: "https://parkwebsite.com",
+        },
+        {
+          name: 'really-old-place-2',
+          description: 'a description of this really old place',
+          link: "https://parkwebsite.com"
+        },
+        {
+          name: 'really-old-place-3',
+          description: 'a description of this really old place',
+          link: "https://parkwebsite.com"
+        },
+      ]);
+      
+    return (
 		<Container >
 			<Row className=" mycard headingborder">
             
@@ -24,6 +42,7 @@ export default function Profile() {
                 <Container>
                     
 				<div>
+                
 				<section className="container-banner">
                     <img id="profilepic" src="https://img.icons8.com/bubbles/170/000000/iron-man.png" alt="profilepic"/>
                     
