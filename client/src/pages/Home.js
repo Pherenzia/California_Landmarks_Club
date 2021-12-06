@@ -7,8 +7,8 @@ import "./Home.css"
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   return (
-    <Container className="background">
-      <div>
+    <Container>
+  
         {/* TODO: display logged in user's username */}
         <h1>Welcome to California Landmark Club {isLoggedIn ? user.username : "Guest"}!</h1>
         <hr />
@@ -30,8 +30,6 @@ export default function Home() {
         <Button variant="primary" type="submit">Submit</Button>
 
       </Form>
-
-      </div>
 
         {/* <Map/> possible idea reusing components refer to line 7*/}
         <div className="d-flex justify-content-around homeMap">

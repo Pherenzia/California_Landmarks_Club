@@ -86,9 +86,11 @@ export default function Login() {
     return <Redirect to="/" />;
   }
   return (
-    <Card style={{ height:'40rem', width: '50rem', marginTop: '1rem' }} className="pic center mx-auto">
+      <Card style={{ height:'60rem', width: '80rem', marginTop: '1rem' }} className="pic center mx-auto">
+      <h1>Adventure Awaits</h1>
     <>
-      <div className="card formBackground">
+      <div className="card formBackground"
+      >
       <div className="justify-content-center">
         <h1 style={styles.formCenter}>Login</h1>
         <hr />
