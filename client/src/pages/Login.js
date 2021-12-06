@@ -87,8 +87,8 @@ export default function Login() {
   }
   return (
       <Card style={{ height:'60rem', width: '80rem', marginTop: '1rem' }} className="pic center mx-auto">
-      <h1>Adventure Awaits</h1>
-    <>
+      <h1 className="adventureText">Adventure Awaits</h1>
+    
       <div className="card formBackground"
       >
       <div className="justify-content-center">
@@ -134,7 +134,7 @@ export default function Login() {
         </form>
       </div>
     </div>
-    </>
+    
     </Card>
   );
 }

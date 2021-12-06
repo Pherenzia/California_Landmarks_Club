@@ -59,7 +59,7 @@ export default function SignUp() {
   }
   return (
       <Card style={{ height:'60rem', width: '80rem', marginTop: '1rem' }} className="pic center mx-auto">
-        <h1>
+        <h1 className="adventureText">
           Adventure Awaits
         </h1>
     <>

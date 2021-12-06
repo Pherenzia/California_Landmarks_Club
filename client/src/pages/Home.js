@@ -7,8 +7,8 @@ import "./Home.css"
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   return (
-      <Card style={{ height:'60rem', width: '70rem', marginTop: '1rem' }} className="homepic center mx-auto">
     <Container className="homeBackground">
+      <Card style={{ height:'60rem', width: '70rem', marginTop: '1rem' }} className="homepic center mx-auto">
   
         {/* TODO: display logged in user's username */}
         <h1>Welcome to California Landmark Club {isLoggedIn ? user.username : "Guest"}!</h1>
@@ -39,8 +39,8 @@ export default function Home() {
         {/* </Container> */}
   
       </div>
-    </Container>
     </Card>
+    </Container>
   );
 }
 
