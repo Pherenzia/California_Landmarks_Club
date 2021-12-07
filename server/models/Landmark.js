@@ -36,13 +36,16 @@ const landmarkSchema = new Schema({
   toJSON: { virtuals: true }, // So `res.json()` and other `JSON.stringify()` functions include virtuals
   toObject: { virtuals: true } // So `toObject()` output includes virtuals
 });
+
+
+// $** is a selector for text fields, creating an index for user queries on the search bar, searches through all text fields in the landmark model for matching query 
 landmarkSchema.index({'$**': 'text'});
+
+//  virtual for populatting post data on landmarks 
 landmarkSchema.virtual('posts', {
-  ref: 'Post', // The model to use
-  localField: '_id', // Find people where `localField`
-  foreignField: 'landmark', // is equal to `foreignField`
-  // If `justOne` is true, 'members' will be a single doc as opposed to
-  // an array. `justOne` is false by default.
+  ref: 'Post', 
+  localField: '_id', 
+  foreignField: 'landmark', 
   justOne: false,
 });
 

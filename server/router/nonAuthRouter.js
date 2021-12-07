@@ -17,6 +17,18 @@ router.get("/landmarks", (req, res) => {
   });
 });
 
+router.get("/landmarks/search", async (req, res) => {
+  try {
+    const search = req.query.query;
+    console.log(req.query)
+    const data = await Landmark.find({$text: {$search: search}})
+    res.json(data)
+  } catch (error) {
+    res.status(500).send(error);
+    console.log(error);
+  }
+});
+
 router.get("/landmarks/:id", async (req, res) => {
   try {
     const landmark = await Landmark.findOne({ _id: req.params.id }).populate(
@@ -71,15 +83,7 @@ router.post("/post", async (req, res) => {
   }
 });
 
-router.get("/temp", async (req, res) => {
-  try {
-    const search = "gilroy";
-    const data = await Landmark.find({$text: {$search: search}})
-    res.json(data)
-  } catch (error) {
-    res.status(500).send(error);
-    console.log(error);
-  }
-});
+
+
 
 module.exports = router;
