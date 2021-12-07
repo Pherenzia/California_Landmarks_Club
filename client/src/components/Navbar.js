@@ -16,9 +16,11 @@ import {
 
 //renamed navbar to navbart for naming convention, also changed app.js
 export default function Navbart() {
+  const history = useHistory();
+  const handleClick= () => history.push('/searchresults');
   const { isLoggedIn, logout } = useAuth();
   const [search, setSearch] = useState("");
-  let history = useHistory();
+  // let history = useHistory();
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -70,15 +72,15 @@ export default function Navbart() {
             >
               <NavLink to="/">Home</NavLink>
               <NavLink to="/profile">Profile</NavLink>
-              <NavLink to="/searchresults">Search Results</NavLink>
-              <NavLink to="/landmarkPage">Landmark Page</NavLink>
+              {/* <NavLink to="/searchresults">Search Results</NavLink> */}
+              {/* <NavLink to="/landmarkPage">Landmark Page</NavLink> */}
               <NavDropdown title="Login/Signup" id="navbarScrollingDropdown">
-                <NavDropdown.Item to="/login">Login</NavDropdown.Item>
-                <NavDropdown.Item to="/signup">Signup</NavDropdown.Item>
+                <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#" disabled>
+              {/* <Nav.Link href="#" disabled>
                 Link
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>
             <Form className="d-flex" onSubmit={handleSearchSubmit}>
               <FormControl
