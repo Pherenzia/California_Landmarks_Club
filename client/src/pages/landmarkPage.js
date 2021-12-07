@@ -1,8 +1,12 @@
 import { useAuth } from "../util/auth";
+import React, { useState, useEffect } from "react";
+import { oneLandmarks } from "../util/api";
+import { useLocation } from "react-router";
 import { Container, Row, Col, Stack, Carousel, Form, Button, Accordion } from "react-bootstrap";
 import niagara from "../images/niagaraFalls.jpg"
 import "./landmarkPage.css"
 import  GoogleMap  from "../components/GoogleMap";
+import { useHistory} from "react-router-dom";
 
 
 // Fetch request for submitting form to profile. 
@@ -14,9 +18,33 @@ import  GoogleMap  from "../components/GoogleMap";
 //   },
 // });
 
+
 const q = "563MVX6+8CQ"
 
 export default function Landmark() {
+  const location = useLocation();
+  const landmarkID = location.pathname.split('/')[2];
+  const [result, setResults] = useState([
+    {
+      name:"placeholder",
+      description: "a description of this really old place",
+      id: "https://parkwebsite.com",
+      image: "placeholder",
+    }
+  ]);
+  console.log(result)
+  useEffect(() => {
+    oneLandmarks(`${landmarkID}`)
+    .then((data) => {
+      // console.log(data)
+      // console.log(data.name)
+      // console.log(data.imageUrl)
+      setResults(data)
+    })
+  },[landmarkID])
+
+  const history = useHistory();
+  const handleClick= () => history.push('/profile');
   const { isLoggedIn, user } = useAuth();
   return (
     <div>
@@ -25,14 +53,14 @@ export default function Landmark() {
       <Container>
         <Row>
           <h2 style={{ textAlign: "center" }}>
-            placeholder for Landmark.title
+            {result.name}
           </h2>
         </Row>
         <Row>
           <Col xs={1}></Col>
           <Col xs={10}>
             <h3 style={{ textAlign: "center" }}>
-              placeholder for registration date
+              {/* placeholder for registration date */}
             </h3>
           </Col>
           <Col xs={1}>
@@ -44,53 +72,49 @@ export default function Landmark() {
       <Container style={{margin: "0"}}>
         <Row>
           <Col xs={3} style={{position: "relative"}, {left: "30px"}}>
-            <Row>Total vists: landmark.visits </Row>
+            <Row>Total vists: {result.visits} </Row>
             <hr />
-            <Row>Placeholder Img of landmark.image_url
-              <img src={niagara}/>
+            <Row>
+              <img src={result.imageUrl}/>
             </Row>
             <hr />
-            <Row>Place holder of landmark.description
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque
-        explicabo ipsum, facilis repellendus omnis amet in accusantium quisquam
-        nam qui consectetur sunt distinctio nemo molestiae ratione. Iure,
-        aliquam debitis.</Row>
+            <Row>{result.description}</Row>
           </Col>
           <Col xs={9}>
           <Carousel>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={niagara}
+      src={result.imageUrl}
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      {/* <h3>First slide label</h3> */}
+      {/* <p>{result.description}</p> */}
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={niagara}
+      src={result.imageUrl}
       alt="Second slide"
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      {/* <h3>Second slide label</h3> */}
+      {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={niagara}
+      src={result.imageUrl}
       alt="Third slide"
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      {/* <h3>Third slide label</h3> */}
+      {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
@@ -154,7 +178,7 @@ export default function Landmark() {
     <Form.Label>Upload Picture?(Maybe)</Form.Label>
     <Form.Control type="file" />
   </Form.Group>
-    <Button variant="outline-info">Submit</Button>{' '}
+    <Button variant="outline-info" onClick={handleClick}>Submit</Button>
   </Form>
   </Accordion.Body>
   </Accordion.Item>

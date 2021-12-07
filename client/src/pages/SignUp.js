@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { useAuth } from "../util/auth";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Container } from "react-bootstrap";
 import "./SignUp.css"
 // This signup form is intentionally minimalist to reduce effort required to
 // customize it to your app's needs. See the excellent best practices guide for
 // sign informs on web.dev https://web.dev/sign-in-form-best-practices/
 
 // TODO: customize styles or import styles with favorite css approach
+
 const styles = {
   formControl: {
     display: "flex",
@@ -35,6 +36,9 @@ const initialFormState = {
 export default function SignUp() {
   const { isLoggedIn, signup, loading, error } = useAuth();
   const [formState, setFormState] = useState(initialFormState);
+  const history = useHistory();
+const handleClick= () => history.push('/profile');
+
 
   useEffect(() => {
     if (error) {
@@ -64,6 +68,7 @@ export default function SignUp() {
         </h1>
     <>
         {/* <Card.Body> */}
+        
             <div className="card formBackground"> 
        
           <div className="justify-content-center">
@@ -146,7 +151,7 @@ export default function SignUp() {
               </div>
 
               <div style={styles.formCenter}>
-                <Button variant="primary" disabled={loading} type="submit">
+                <Button onClick={handleClick} variant="primary" disabled={loading} type="submit">
                 {loading ? "Loading..." : "Submit"}
               </Button>
               </div>

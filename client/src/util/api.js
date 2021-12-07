@@ -46,3 +46,24 @@ export async function findMe() {
 }
 
 
+export async function searchLandmarks(query) {
+  const res = await fetch(`/api/landmarks/search${query}`)
+  const data = await res.json();
+  if (res.ok) {
+    return data;
+  }
+  throw data;
+}
+
+export async function oneLandmarks(query) {
+  const res = await fetch(`/api/landmarks/${query}`)
+  const data = await res.json();
+  if (res.ok) {
+    return data;
+  }
+  throw data;
+}
+// JM export const searchDeveloperHere = (query) => {
+//   return fetch(`https://geocode.search.hereapi.com/v1/geocode?q=${query} `);
+// }
+
