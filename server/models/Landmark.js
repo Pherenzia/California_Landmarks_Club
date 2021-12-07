@@ -27,6 +27,9 @@ const landmarkSchema = new Schema({
       type: String,
       required: true,
   },
+  pluscode: {
+    type: String,
+  },
   visits : {
     type: Number,
     default: 0,
