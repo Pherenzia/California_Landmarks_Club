@@ -3,13 +3,19 @@ import { Link, useHistory } from 'react-router-dom'
 import { Button, Container, Form, FormControl, Image, Card } from "react-bootstrap";
 import "./Home.css"
 import searchResults from './SearchResults'
+import React, { useState } from "react";
+
 // import Map from "../components/Map"; possible idea for reusing components
 
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   const history = useHistory();
-  const handleClick= () => history.push('/searchresults');
+  const [search, setSearch] = useState("");
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    history.push(`/searchresults?query=${search}`);
+  };
 
   // const App = () => (
   //   <Router>
@@ -34,15 +40,25 @@ export default function Home() {
       <Form Style={{ width:'50rem', marginTop: '5rem'}} className="mx-auto">
         <Form.Group className="mb-3" controlId="formBasicSearch">
         <Form.Label>Search by location, city, or zipcode</Form.Label>
-        <FormControl type="search" placeholder="Search" />
+        {/* <FormControl type="search" placeholder="Search" /> */}
         {/* <Form.Text className="text-muted">Search by location, city, or zipcode</Form.Text> */}
         </Form.Group>
         
 
-        <Button variant="primary" type="submit" onClick={handleClick}>Submit</Button>
+        {/* <Button variant="primary" type="submit" onClick={handleClick}>Submit</Button> */}
 
       </Form>
-
+      <Form className="d-flex" onSubmit={handleSearchSubmit}>
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                aria-label="Search"
+              />
+              <Button type="submit" variant="outline-success">Search</Button>
+            </Form>
         {/* <Map/> possible idea reusing components refer to line 7*/}
         <div className="d-flex justify-content-around homeMap">
         {/* <Container> */}

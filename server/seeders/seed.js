@@ -12,7 +12,7 @@ const landmarkSeed = [
     latitude: "32°45′06″N",
     longitude: "117°11′39″W",
     imageUrl:
-      "https://en.wikipedia.org/wiki/California_Historical_Landmarks_in_San_Diego_County#/media/File:Adobe_Chapel.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Adobe_Chapel.jpg/1280px-Adobe_Chapel.jpg",
     county: "San Diego",
   },
   {
@@ -22,7 +22,7 @@ const landmarkSeed = [
     latitude: "32°40′18″N",
     longitude: "117°14′27″W",
     imageUrl:
-      "https://en.wikipedia.org/wiki/California_Historical_Landmarks_in_San_Diego_County#/media/File:CabrilloLighthouse.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/CabrilloLighthouse.jpg/1280px-CabrilloLighthouse.jpg",
     county: "San Diego",
   },
   {
@@ -32,7 +32,7 @@ const landmarkSeed = [
     latitude: "34°19′22″N",
     longitude: "118°29′51″W",
     imageUrl:
-      "https://en.wikipedia.org/wiki/California_Historical_Landmarks_in_Los_Angeles_County#/media/File:LA_Aqueduct_Cascades.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/LA_Aqueduct_Cascades.jpg/800px-LA_Aqueduct_Cascades.jpg",
     county: "Los Angeles",
   },
   {
@@ -42,7 +42,7 @@ const landmarkSeed = [
     latitude: "4°41′54″N",
     longitude: "118°08′20″W",
     imageUrl:
-      "https://en.wikipedia.org/wiki/California_Historical_Landmarks_in_Los_Angeles_County#/media/File:Western_Hoten_in_Lancaster_California.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/29/Western_Hoten_in_Lancaster_California.jpg",
     county: "Los Angeles",
   },
   {
@@ -52,7 +52,7 @@ const landmarkSeed = [
     latitude: "7°47′39″N",
     longitude: "122°24′12″W",
     imageUrl:
-      "https://en.wikipedia.org/wiki/California_Historical_Landmarks_in_San_Francisco#/media/File:First_San_Francisco_Mint_building_(taken_on_27Aug2012_13hrs48mins14secs).jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/First_San_Francisco_Mint_building_%28taken_on_27Aug2012_13hrs48mins14secs%29.jpg/1280px-First_San_Francisco_Mint_building_%28taken_on_27Aug2012_13hrs48mins14secs%29.jpg",
     county: "San Francisco",
     _id: mongoose.Types.ObjectId("61ae6486e99497f71286904c"),
   },

@@ -4,11 +4,11 @@ import "./Result.css";
 import { Link } from "react-router-dom";
 
 function Result({ result }) {
-  const { name, id, description } = result;
+  const { name, id, description, imageUrl } = result;
   return (
     <Card className="resultCard">
       <div className="leftDiv">
-        <Card.Img variant="left" src="https://via.placeholder.com/300x200" />
+        <Card.Img variant="left" src={imageUrl} width="300" height="200"/>
       </div>
       <div className="rightDiv">
         <Card.Body>
