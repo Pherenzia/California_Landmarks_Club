@@ -4,11 +4,14 @@
           var(--second-blue) 
           )
 }
-.homepic { 
+.homepic {
+    top:0;
+    z-index: 1;
+    background-size:cover;
     background-repeat: no-repeat;
-    background-position: left;
     background-image: url("https://images.pexels.com/photos/1928067/pexels-photo-1928067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);
+    
 }
 
 .homeBackground { 
