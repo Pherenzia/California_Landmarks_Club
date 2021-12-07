@@ -75,8 +75,8 @@ export default function Navbart() {
               {/* <NavLink to="/searchresults">Search Results</NavLink> */}
               {/* <NavLink to="/landmarkPage">Landmark Page</NavLink> */}
               <NavDropdown title="Login/Signup" id="navbarScrollingDropdown">
-                <NavDropdown.Item to="/login">Login</NavDropdown.Item>
-                <NavDropdown.Item to="/signup">Signup</NavDropdown.Item>
+                <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
               </NavDropdown>
               {/* <Nav.Link href="#" disabled>
                 Link
