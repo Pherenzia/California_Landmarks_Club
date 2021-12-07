@@ -22,18 +22,6 @@ async function postJSON(url, body, headers = {}) {
   throw data;
 }
 
-// save book data for a logged in user
-// JM export const saveBook = (bookData, token) => {
-//   return fetch('/api/users', {
-//     method: 'PUT',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       authorization: `Bearer ${token}`,
-//     },
-//     body: JSON.stringify(bookData),
-//   });
-// };
-
 export function login({ email, password }) {
   return postJSON("/api/auth/login", { email, password });
 }
@@ -46,7 +34,7 @@ export async function findMe() {
   const res = await fetch("/api/auth/me", {
     headers: {
       // Add auth header to requests requiring authentication
-      //JM 'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
       authorization: `Bearer ${token.get()}`,
     },
   });
@@ -57,6 +45,4 @@ export async function findMe() {
   throw data;
 }
 
-// JM export const searchDeveloperHere = (query) => {
-//   return fetch(`https://geocode.search.hereapi.com/v1/geocode?q=${query} `);
-// }
+

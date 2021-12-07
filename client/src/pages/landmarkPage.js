@@ -2,6 +2,8 @@ import { useAuth } from "../util/auth";
 import { Container, Row, Col, Stack, Carousel, Form, Button, Accordion } from "react-bootstrap";
 import niagara from "../images/niagaraFalls.jpg"
 import "./landmarkPage.css"
+import  GoogleMap  from "../components/GoogleMap";
+
 
 // Fetch request for submitting form to profile. 
 // const landmarkResponse = await fetch('/api/landmark', {
@@ -11,6 +13,8 @@ import "./landmarkPage.css"
 //     'Content-Type': 'application/json; charset=UTF-8',
 //   },
 // });
+
+const q = "563MVX6+8CQ"
 
 export default function Landmark() {
   const { isLoggedIn, user } = useAuth();
@@ -162,6 +166,7 @@ export default function Landmark() {
       <p>
         
       </p>
+      <GoogleMap q={q} /> 
     </div>
   );
 }
