@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./Result.css";
+import { Link } from "react-router-dom";
 
 function Result({ result }) {
-  const { name, link, description } = result;
+  const { name, id, description } = result;
   return (
     <Card className="resultCard">
       <div className="leftDiv">
@@ -12,10 +13,12 @@ function Result({ result }) {
       <div className="rightDiv">
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Text>
-            {description}
-          </Card.Text>
-          <Button className="landmarkBtn" variant="primary">Check it out!</Button>
+          <Card.Text>{description}</Card.Text>
+            <Link
+            className="btn btn-primary btn-block btn-squared"
+            to={`/landmarkpage/${id}`}
+            >Check it out!
+            </Link>
         </Card.Body>
       </div>
     </Card>
