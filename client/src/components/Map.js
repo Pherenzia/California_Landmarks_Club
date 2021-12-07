@@ -1,12 +1,16 @@
 import React from "react";
-import { MDBContainer, MDBIframe } from "mdbreact";
 
-const Map = () => {
+const GoogleMap = (q) => {
   return (
-    <MDBContainer className="text-center">
-      <MDBIframe src="https://www.youtube.com/embed/v64KOxKVLVg" />
-    </MDBContainer>
+    <iframe
+      title="GoogleMap"
+      width="450"
+      height="250"
+      frameborder="0"
+      src={`https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyABei7qsaJawM-o0ibN05LmcjU3ge6MUhc&q=${q}`}
+      allowfullscreen
+    ></iframe>
   );
-}
+};
 
-export default Map;
+export default GoogleMap;
