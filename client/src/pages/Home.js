@@ -1,13 +1,24 @@
 import { useAuth } from "../util/auth";
+import { Link, useHistory } from 'react-router-dom'
 import { Button, Container, Form, FormControl, Image, Card } from "react-bootstrap";
 import "./Home.css"
+import searchResults from './SearchResults'
 // import Map from "../components/Map"; possible idea for reusing components
 
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
+  const history = useHistory();
+  const handleClick= () => history.push('/searchresults');
+
+  // const App = () => (
+  //   <Router>
+  //     <Route path="/searchresults" component={searchResults} />
+  //   </Router>
+  // );
   return (
-    <Container className="homeBackground">
+    <Container>
+      <div>
       <Card style={{ height:'60rem', width: '70rem', marginTop: '1rem' }} className="homepic center mx-auto">
   
         {/* TODO: display logged in user's username */}
@@ -28,7 +39,7 @@ export default function Home() {
         </Form.Group>
         
 
-        <Button variant="primary" type="submit">Submit</Button>
+        <Button variant="primary" type="submit" onClick={handleClick}>Submit</Button>
 
       </Form>
 
@@ -40,6 +51,7 @@ export default function Home() {
   
       </div>
     </Card>
+    </div>
     </Container>
   );
 }

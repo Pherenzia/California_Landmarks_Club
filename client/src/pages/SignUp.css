@@ -6,6 +6,7 @@
 }
 
 .pic { 
+    
     background-repeat: no-repeat;
     background-image: url("https://images.pexels.com/photos/3484061/pexels-photo-3484061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     box-shadow: 0 2px 2px var(--tertiary), 0 6px 12px var(--tertiary);

@@ -2,6 +2,7 @@ import { useAuth } from "../util/auth";
 import { Container, Row, Col, Stack, Carousel, Form, Button, Accordion } from "react-bootstrap";
 import niagara from "../images/niagaraFalls.jpg"
 import "./landmarkPage.css"
+import { useHistory} from "react-router-dom";
 
 // Fetch request for submitting form to profile. 
 // const landmarkResponse = await fetch('/api/landmark', {
@@ -13,6 +14,8 @@ import "./landmarkPage.css"
 // });
 
 export default function Landmark() {
+  const history = useHistory();
+  const handleClick= () => history.push('/profile');
   const { isLoggedIn, user } = useAuth();
   return (
     <div>
@@ -150,7 +153,7 @@ export default function Landmark() {
     <Form.Label>Upload Picture?(Maybe)</Form.Label>
     <Form.Control type="file" />
   </Form.Group>
-    <Button variant="outline-info">Submit</Button>{' '}
+    <Button variant="outline-info" onClick={handleClick}>Submit</Button>
   </Form>
   </Accordion.Body>
   </Accordion.Item>

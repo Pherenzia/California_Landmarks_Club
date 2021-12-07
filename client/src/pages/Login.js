@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { useAuth } from "../util/auth";
 import { Button, Card } from "react-bootstrap";
 import "./Login.css";
@@ -61,6 +61,9 @@ const initialFormState = {
 };
 
 export default function Login() {
+  const history = useHistory();
+  const handleClick= () => history.push('/profile');
+  
   const { isLoggedIn, login, loading, error } = useAuth();
   const [formState, setFormState] = useState(initialFormState);
 
@@ -127,7 +130,7 @@ export default function Login() {
           </div>
           <br/>
           <div style={styles.formCenter}>
-            <Button varient="primary" disabled={loading} type="submit">
+            <Button onClick={handleClick} varient="primary" disabled={loading} type="submit">
               {loading ? "Loading..." : "Submit"}
             </Button>
           </div>

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { useAuth } from "../util/auth";
 import "./Navbar.css";
@@ -6,6 +6,8 @@ import { Container, Nav, NavDropdown, Form, FormControl, Button } from "react-bo
 
 //renamed navbar to navbart for naming convention, also changed app.js
 export default function Navbart() {
+  const history = useHistory();
+  const handleClick= () => history.push('/searchresults');
   const { isLoggedIn, logout } = useAuth();
   return (
     <Navbar className="navbar">
@@ -43,7 +45,7 @@ export default function Navbart() {
      
   <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand >Prestiege Worldwide</Navbar.Brand>
+    <Navbar.Brand >Prestige Worldwide</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -57,8 +59,8 @@ export default function Navbart() {
         <NavLink to="/searchresults">Search Results</NavLink>
         <NavLink to="/landmarkPage">Landmark Page</NavLink>
         <NavDropdown title="Login/Signup" id="navbarScrollingDropdown">
-          <NavDropdown.Item to="/login">Login</NavDropdown.Item>
-          <NavDropdown.Item to="/signup">Signup</NavDropdown.Item>
+          <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+          <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="#" disabled>
           Link
@@ -71,7 +73,7 @@ export default function Navbart() {
           className="me-2"
           aria-label="Search"
         />
-        <Button variant="outline-success">Search</Button>
+        <Button variant="outline-success" onClick={handleClick}>Search</Button>
       </Form>
     </Navbar.Collapse>
   </Container>

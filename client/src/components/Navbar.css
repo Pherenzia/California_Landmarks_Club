@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   justify-content: flex-start;
+  z-index: 2;
 }
 
 .navbar-link {
