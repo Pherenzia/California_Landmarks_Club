@@ -5,7 +5,9 @@ import { useLocation } from "react-router";
 import { Container, Row, Col, Stack, Carousel, Form, Button, Accordion } from "react-bootstrap";
 import niagara from "../images/niagaraFalls.jpg"
 import "./landmarkPage.css"
+import  GoogleMap  from "../components/GoogleMap";
 import { useHistory} from "react-router-dom";
+
 
 // Fetch request for submitting form to profile. 
 // const landmarkResponse = await fetch('/api/landmark', {
@@ -15,6 +17,10 @@ import { useHistory} from "react-router-dom";
 //     'Content-Type': 'application/json; charset=UTF-8',
 //   },
 // });
+
+
+const q = "563MVX6+8CQ"
+
 export default function Landmark() {
   const location = useLocation();
   const landmarkID = location.pathname.split('/')[2];
@@ -184,6 +190,7 @@ export default function Landmark() {
       <p>
         
       </p>
+      <GoogleMap q={q} /> 
     </div>
   );
 }
